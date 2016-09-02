@@ -1,12 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-let Hello = React.createClass({
-	render:function(){
-		return <div>Hi</div>
-	}
-})
-
-alert("HI")
+import { Router , browserHistory} from 'react-router'
+// see './routes.jsx on react router'
+import routes from './routes.jsx'
 
 
-ReactDOM.render(<Hello /> , document.querySelector('#app'))
+ReactDOM.render(<Router history={browserHistory} routes={routes} />, 
+
+document.querySelector('#app'))
