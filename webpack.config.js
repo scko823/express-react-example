@@ -6,12 +6,15 @@ module.exports = {
 		path:path.join(__dirname, 'public'),
 		filename:'bundle.js'
 	},
-	modules: {
+	module: {
 		loaders:[
 			{
-				test:/\.jsx?/,
+				test:/\.jsx?$/,
 				exclude:'node_modules',
-				loader:'babel-loader'
+				loader:'babel',
+				query:{
+					presets:['es2015','react']
+				}
 			}
 		]
 	}
