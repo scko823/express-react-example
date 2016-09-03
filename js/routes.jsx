@@ -39,6 +39,11 @@ let Hi3 = React.createClass({
 	}
 })
 
+
+//add another component, posts, which is connected to redux
+import Posts from './posts.jsx'
+
+
 export default (
 	<Route>
 		<Route path="/" component={Hello} />
@@ -53,5 +58,6 @@ export default (
 		{/*this refer to /hi3/whateverhere */}
 		<Route path="/hi3/:something" component={Hi3} />
 		<Route path="/HOC" component={myWarppedComponent} />
+		<Route path="/posts" component={Posts} />
 	</Route>
 )
