@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link, Router, Route, IndexRoute, browserHistory} from 'react-router'
+import  { myWarppedComponent } from './HOC.jsx' 
 //Here we have 3 components
 
 let Hello = React.createClass({
@@ -10,6 +11,7 @@ let Hello = React.createClass({
 		<Link to="/hi">Go to hi with nested component</Link><br/>
 		<Link to="/hi2">Go to hi2</Link><br/>
 		<Link to="/hi3/something">Go to hi3</Link>
+		<Link to="/HOC">Go to HOC</Link>
 		</div>
 	}
 })
@@ -50,5 +52,6 @@ export default (
 		</Route>
 		{/*this refer to /hi3/whateverhere */}
 		<Route path="/hi3/:something" component={Hi3} />
+		<Route path="/HOC" component={myWarppedComponent} />
 	</Route>
 )
